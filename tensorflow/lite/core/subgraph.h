@@ -715,11 +715,22 @@ class Subgraph {
 
 }  // namespace impl
 
+<<<<<<< HEAD
 #if TFLITE_EXPERIMENTAL_RUNTIME_EAGER
 using Subgraph = tflrt::Subgraph;
 #else
 using Subgraph = impl::Subgraph;
 #endif
+=======
+  // Whether memory planner should be instantiated to retain intermediates for
+  // debugging.
+  bool preserve_all_tensors_ = false;
+
+  // Whether the subgraph is currently in use (e.g. running the `Invoke`
+  // or `AllocateTensors` functions).
+  bool is_subgraph_in_use_ = false;
+};
+>>>>>>> c6173f5fe66 (TFLite: Error out when the graph has a recurion.)
 
 }  // namespace tflite
 #endif  // TENSORFLOW_LITE_CORE_SUBGRAPH_H_

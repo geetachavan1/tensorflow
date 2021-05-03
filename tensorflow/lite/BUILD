@@ -478,6 +478,11 @@ cc_test(
         "testdata/test_min_runtime.bin",
         "testdata/test_model.bin",
         "testdata/test_model_broken.bin",
+<<<<<<< HEAD
+=======
+        "testdata/unsupported_recursion.bin",
+        "testdata/while_op_with_forwarding_input.bin",
+>>>>>>> c6173f5fe66 (TFLite: Error out when the graph has a recurion.)
     ],
     tags = [
         "tflite_not_portable",
